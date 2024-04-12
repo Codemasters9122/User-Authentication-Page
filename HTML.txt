@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IEEE RECRUITMENT DRIVE '24</title>
     <link rel="icon" href="https://media.licdn.com/dms/image/C510BAQF4AImtyDq4dQ/company-logo_200_200/0/1630586263849/ieee_ju_logo?e=2147483647&v=beta&t=_GW3VgSLs7ReOKtpuVdlCqNorGnEtdUENjFdZZv1yFg" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,7 +19,7 @@
         }
         .container {
             max-width: 400px;
-            margin: 150px auto;
+            margin: 160px auto;
             background-color: rgba(255, 255, 255, 0.68); /* Transparent background */
             padding: 40px; /* Increased padding */
             border-radius: 8px;
@@ -31,19 +33,21 @@
         input[type="text"],
         input[type="email"],
         input[type="password"] {
-            width: calc(100% - 20px);
+            width: calc(100% - 10px);
             padding: 15px;
-            margin: 8px 0;
+            margin: auto;
             border: 2px solid transparent; /* Initially transparent border */
             border-radius: 10px;
             box-sizing: border-box;
             transition: all 0.3s ease;
+            padding-left: 40px; /* Adjusted padding for icon */
         }
         input[type="text"]:focus,
         input[type="email"]:focus,
         input[type="password"]:focus {
             transform: scale(1.05);
         }
+        
         input[type="submit"] {
             width: 100%;
             background-color: #8931ae; /* Darker purple button */
@@ -92,6 +96,43 @@
         .signin-link a:hover {
             text-decoration: underline;
         }
+        
+
+        .input-icon {
+    padding-top:5px;
+    position: relative;
+    top: 50%;
+    margin: auto;
+    transform: translateY(-50%);
+    color: #6a5acd;
+    z-index: 0.4;
+}
+
+.input-icon i {
+    position: absolute;
+    margin:auto;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left:10px;
+    font-size : 18px;
+}
+
+/* Adjust input padding to accommodate icons */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 40px);
+    padding: 10px 10px 10px 30px; /* Adjusted padding for icon */
+    margin: 8px 0;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+
+
+
         @keyframes expandShrink {
             0%{
                 transform: scale(1);
@@ -132,10 +173,16 @@
 <div class="container">
     <h2>Register now!!</h2>
     <form id="signupForm" method="post">
+        <div class="input-icon"><i class="fas fa-user"></i></div>
         <input type="text" id="userid" placeholder="ID" name="userid" required>
+        
+        <div class="input-icon"><i class="fas fa-lock"></i></div>
         <input type="password" id="password" name="password" placeholder="Password" required>
-       
+        
+        <div class="input-icon"><i class="fas fa-lock"></i></div>
         <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+        
+        <div class="input-icon"><i class="fas fa-envelope"></i></div>
         <input type="email" id="email" name="email" placeholder="Email" required>
 
         <input type="submit" value="Sign Up">
