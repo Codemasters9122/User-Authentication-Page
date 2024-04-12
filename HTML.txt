@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE RECRUITMENT DRIVE '24</title>
+    <link rel="icon" href="https://media.licdn.com/dms/image/C510BAQF4AImtyDq4dQ/company-logo_200_200/0/1630586263849/ieee_ju_logo?e=2147483647&v=beta&t=_GW3VgSLs7ReOKtpuVdlCqNorGnEtdUENjFdZZv1yFg" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://assets.telegraphindia.com/telegraph/e451d0a3-aa85-4ecf-aa3d-fefdea0cc13e.jpg');
+            background-size: cover;
+            animation: fadeInDown 1s ease;
+            position: relative; /* Added */
+        }
+        .container {
+            max-width: 400px;
+            margin: 150px auto;
+            background-color: rgba(255, 255, 255, 0.68); /* Transparent background */
+            padding: 40px; /* Increased padding */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+            animation: fadeInDown 1s ease;
+        }
+        h2 {
+            text-align: center;
+            color: #9858e1; /* Purple text color */
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 15px;
+            margin: 8px 0;
+            border: 2px solid transparent; /* Initially transparent border */
+            border-radius: 10px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            transform: scale(1.05);
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #8931ae; /* Darker purple button */
+            color: #fff;
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            animation: expandShrink 2s alternate infinite;
+        }
+        input[type="submit"]:hover {
+            background-color: #4b0082; /* Lighter purple button on hover */
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        #password-strength {
+            color: #6a5acd; /* Purple color for strength meter */
+            font-size: 12px;
+            margin-top: 5px;
+            transition: all 0.3s ease;
+        }
+        #password-strength::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 4px;
+            background-color: transparent;
+            transition: width 0.3s ease;
+        }
+        .signin-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .signin-link a {
+            color: #6a5acd;
+            text-decoration: none;
+        }
+        .signin-link a:hover {
+            text-decoration: underline;
+        }
+        @keyframes expandShrink {
+            0%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(1.1);
+            }
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slide {
+            from{
+                opacity:0
+            }
+            to{
+                opacity:1
+            }
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 500px) {
+            .container {
+                padding: 20px; /* Decreased padding for smaller screens */
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Register now!!</h2>
+    <form id="signupForm" method="post">
+        <input type="text" id="userid" placeholder="ID" name="userid" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+       
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+
+        <input type="submit" value="Sign Up">
+        <div id="error-message" class="error"></div>
+    </form>
+    <div class="signin-link">
+        <p>Already have an account? <a href="#">Sign in</a></p>
+    </div>
+</div>
+<script>
+    // Prevent copy paste in password fields
+    var passwordFields = document.querySelectorAll('input[type="password"]');
+    passwordFields.forEach(function (passwordField) {
+        passwordField.addEventListener('copy', function (event) {
+            event.preventDefault();
+        });
+        passwordField.addEventListener('paste', function (event) {
+            event.preventDefault();
+        });
+    });
+
+    // Password strength meter
+    document.getElementById('password').addEventListener('input', function () {
+        var password = document.getElementById('password').value;
+        var strengthBadge = document.getElementById('password-strength');
+        var strengthMeter = document.getElementById('password-strength').querySelector('::before');
+        var passwordField = document.getElementById('password');
+
+        var strength = 0;
+        if (password.match(/[a-z]+/)) {
+            strength += 1;
+        }
+        if (password.match(/[A-Z]+/)) {
+            strength += 1;
+        }
+        if (password.match(/[0-9]+/)) {
+            strength += 1;
+        }
+        if (password.length >= 8) {
+            strength += 1;
+        }
+
+        switch (strength) {
+            case 0:
+                strengthBadge.style.color = '#e74c3c';
+                strengthBadge.textContent = 'Weak';
+                strengthMeter.style.backgroundColor = 'transparent';
+                strengthMeter.style.width = '0';
+                passwordField.style.borderColor = '#e74c3c'; // Red border color for weak password
+                break;
+            case 1:
+                strengthBadge.style.color = '#e67e22';
+                strengthBadge.textContent = 'Moderate';
+                strengthMeter.style.backgroundColor = '#e67e22';
+                strengthMeter.style.width = '25%';
+                passwordField.style.borderColor = '#e67e22'; // Orange border color for moderate password
+                break;
+            case 2:
+                strengthBadge.style.color = '#f1c40f';
+                strengthBadge.textContent = 'Good';
+                strengthMeter.style.backgroundColor = '#f1c40f';
+                strengthMeter.style.width = '50%';
+                passwordField.style.borderColor = '#f1c40f'; // Yellow border color for good password
+                break;
+            case 3:
+                strengthBadge.style.color = '#2ecc71';
+                strengthBadge.textContent = 'Strong';
+                strengthMeter.style.backgroundColor = '#2ecc71';
+                strengthMeter.style.width = '75%';
+                passwordField.style.borderColor = '#2ecc71'; // Green border color for strong password
+                break;
+            case 4:
+                strengthBadge.style.color = '#27ae60';
+                strengthBadge.textContent = 'Very Strong';
+                strengthMeter.style.backgroundColor = '#27ae60';
+                strengthMeter.style.width = '100%';
+                passwordField.style.borderColor = '#27ae60'; // Dark green border color for very strong password
+                break;
+        }
+    });
+
+    // Form submission
+    document.getElementById('signupForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirmPassword').value;
+
+        if (password === confirmPassword) {
+            var formData = new FormData(this);
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        alert('Sign up successful!');
+                        // Redirect or show success message
+                    } else {
+                        var errorMessage = JSON.parse(xhr.responseText).error;
+                        document.getElementById('error-message').textContent = errorMessage;
+                    }
+                }
+            };
+            xhr.open('POST', 'signup.php', true);
+            xhr.send(formData);
+        } else {
+            document.getElementById('error-message').textContent = "Oops!! Passwords do not match!";
+        }
+    });
+</script>
+
+</body>
+</html>
