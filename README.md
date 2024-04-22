@@ -2,7 +2,7 @@
 
 **Overview**
 
-This repository contains the source code for the sign-up and sign-in pages for the IEEE Recruitment Drive '24. The pages are built using HTML, CSS, and JavaScript, and they are designed to be responsive and user-friendly.
+This repository contains the source code for the sign-up and sign-in pages for the IEEE Recruitment Drive '24. The pages are built using **HTML, CSS, and JavaScript**, and they are designed to be responsive and user-friendly.
 
 **Features**
 
@@ -21,7 +21,9 @@ Input validation for username, password, and email
 *Font Awesome for icons*
 
 *js-SHA256 for password hashing*
-Setup
+
+**Setup**
+
 Also download the db.json file and run json-server in the same project directory using bash command json-server --watch db.json
 Open the signup.html and login.html files in a web browser to view the sign-up and sign-in pages, respectively.
 Usage
