@@ -14,14 +14,7 @@ JavaScript
 Font Awesome for icons
 js-sha256 for password hashing
 Setup
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/your-username/ieee-recruitment-drive-24.git
-Navigate to the project directory:
-bash
-Copy code
-cd ieee-recruitment-drive-24
+
 Open the signup.html and login.html files in a web browser to view the sign-up and sign-in pages, respectively.
 Usage
 Sign-up Page (signup.html)
