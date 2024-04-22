@@ -14,7 +14,7 @@ JavaScript
 Font Awesome for icons
 js-sha256 for password hashing
 Setup
-
+Also download the db.json file and run json-server in the same project directory using bash command json-server --watch db.json
 Open the signup.html and login.html files in a web browser to view the sign-up and sign-in pages, respectively.
 Usage
 Sign-up Page (signup.html)
