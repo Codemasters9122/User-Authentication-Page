@@ -25,8 +25,10 @@ Input validation for username, password, and email
 **Setup**
 
 *Also download the db.json file and run json-server in the same project directory using bash command* **json-server --watch db.json**
+
 Open the signup.html and login.html files in a web browser to view the sign-up and sign-in pages, respectively.
-Usage
+
+**Usage**
 Sign-up Page (signup.html)
 Open signup.html in a web browser.
 Fill out the registration form with a username, password, confirm password, and email.
@@ -36,7 +38,8 @@ Sign-in Page (login.html)
 Open login.html in a web browser.
 Enter your username and password.
 Click the "Log In" button to submit the form.
-Upon successful login**, you will receive an alert message.
+Though having minor errors,upon successful login, you will receive an alert message.
+
 **Contributing**
 
 If you'd like to contribute to this project, please fork the repository and create a pull request with your changes.
