@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE RECRUITMENT DRIVE '24</title>
+    <link rel="icon" href="https://media.licdn.com/dms/image/C510BAQF4AImtyDq4dQ/company-logo_200_200/0/1630586263849/ieee_ju_logo?e=2147483647&v=beta&t=_GW3VgSLs7ReOKtpuVdlCqNorGnEtdUENjFdZZv1yFg" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://english.mathrubhumi.com/image/contentid/policy:1.8880685:1693968796/WhatsApp-Image-2021-05-03-at-5.31.34-PM.jpg?$p=a991767&f=4x3&w=1080&q=0.8');
+            background-size: contain;
+            animation: slideAnimation 30s infinite ease-in;
+            position: relative; /* Added */
+            backdrop-filter: blur(5px);
+        }
+        .container {
+            max-width: 400px;
+            margin: 160px auto;
+            background-color: rgba(255, 255, 255, 0.68); /* Transparent background */
+            padding: 40px; /* Increased padding */
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+            animation: fadeInDown 1s ease;
+        }
+        h2 {
+            text-align: center;
+            color: #9858e1; /* Purple text color */
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 10px);
+            padding: 15px;
+            margin: auto;
+            border: 2px solid transparent; /* Initially transparent border */
+            border-radius: 10px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            padding-left: 40px; /* Adjusted padding for icon */
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            transform: scale(1.05);
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            background-color: #8931ae; /* Darker purple button */
+            color: #fff;
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            animation: expandShrink 2s alternate infinite;
+        }
+        input[type="submit"]:hover {
+            background-color: #4b0082; /* Lighter purple button on hover */
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .signin-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .signin-link a {
+            color: #6a5acd;
+            text-decoration: none;
+        }
+        .signin-link a:hover {
+            text-decoration: underline;
+        }
+    
+
+        .input-icon {
+    padding-top:5px;
+    position: relative;
+    top: 50%;
+    margin: auto;
+    transform: translateY(-50%);
+    color: #6a5acd;
+    z-index: 0.4;
+    transition: all 0.3s ease;
+}
+.input-icon:focus{
+    transform: scale(1.05);
+}
+
+.input-icon i {
+    position: absolute;
+    margin:auto;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left:10px;
+    font-size : 18px;
+    transition: all 0.3s ease;
+}
+
+/* Adjust input padding to accommodate icons */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 40px);
+    padding: 10px 10px 10px 30px; /* Adjusted padding for icon */
+    margin: 8px 0;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+.toggle-password {
+    position: relative;
+    margin: 0px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding-top: 0px;
+    padding-left: 7px;
+    padding-bottom: 0px;
+        }
+            @keyframes slideAnimation {
+            0% {
+                background-position: 0 0;
+                }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+
+
+        @keyframes expandShrink {
+            0%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(1.1);
+            }
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slide {
+            from{
+                opacity:0
+            }
+            to{
+                opacity:1
+            }
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 500px) {
+            .container {
+                padding: 20px; /* Decreased padding for smaller screens */
+                max-width: 90%;
+            }
+        }
+        @media only screen 
+            and (device-width: 390px) 
+            and (device-height: 844px) 
+            and (-webkit-device-pixel-ratio: 3) { 
+        body {
+        font-size: 18px;
+        background-color: lightblue;
+    }
+    @media only screen and (max-width: 500px) {
+    .container {
+        margin: 80px auto; /* Adjusted margin for smaller screens */
+        padding: 20px; /* Decreased padding for smaller screens */
+    }
+}
+
+/* iPhone 12 Pro and similar sizes */
+@media only screen 
+    and (device-width: 390px) 
+    and (device-height: 844px) 
+    and (-webkit-device-pixel-ratio: 3) { 
+    .container {
+        width: 85%; /* Adjusted width for iPhone 12 Pro */
+    }
+}
+
+/* Samsung Galaxy S9 and similar sizes */
+@media only screen 
+    and (device-width: 360px) 
+    and (device-height: 740px) 
+    and (-webkit-device-pixel-ratio: 4) { 
+    .container {
+        width: 80%; /* Adjusted width for Samsung Galaxy S9 */
+    }
+}
+
+/* Samsung Galaxy Tab S4 and similar sizes */
+@media only screen 
+    and (device-width: 800px) 
+    and (device-height: 1280px) 
+    and (-webkit-device-pixel-ratio: 2) { 
+    .container {
+        width: 60%; /* Adjusted width for Samsung Galaxy Tab S4 */
+    }
+}
+
+/* iPad Mini and similar sizes */
+@media only screen 
+    and (device-width: 768px) 
+    and (device-height: 1024px) 
+    and (-webkit-device-pixel-ratio: 2) { 
+    .container {
+        width: 70%; /* Adjusted width for iPad Mini */
+    }
+}
+
+/* iPad Pro 12.9-inch and similar sizes */
+@media only screen 
+    and (device-width: 1024px) 
+    and (device-height: 1366px) 
+    and (-webkit-device-pixel-ratio: 2) { 
+    .container {
+        width: 50%; /* Adjusted width for iPad Pro 12.9-inch */
+    }
+}
+    
+}
+    </style>
+</head>
+<body aria-label="Sign-up form body" aria-describedby="Sign-up form body">
+<div class="container">
+    <h2 aria-label="Header Register now!!">Register now!</h2>
+    <form id="signupForm" aria-label="signup form"method="post" action="http://localhost:3000/users">
+        <div class="input-icon"><i class="fas fa-user"></i></div>
+        <input type="text" id="userid" placeholder="Username" name="userid" aria-label="Username" required>
+        
+        <div class="input-icon"><i class="fas fa-lock"></i></div>
+        <input type="password" id="password" name="password" placeholder="Password"  aria-label="Password" required>
+        <i aria-label="togglePassword"class="fas fa-eye toggle-password" id="togglePassword"></i>
+        
+        <div class="input-icon"><i class="fas fa-lock"></i></div>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" aria-label="Confirm Password" required>
+        <i aria-label="toggleConfirmPassword" class="fas fa-eye toggle-password" id="toggleConfirmPassword"></i>
+        
+        <div class="input-icon"><i class="fas fa-envelope"></i></div>
+        <input type="email" id="email" autocomplete="on" name="email" placeholder="Email" aria-label="email" required>
+
+        <input type="submit" value="Sign Up" aria-label="submit">
+        <div area-label="error-message"id="error-message" class="error"></div>
+    </form>
+    <div class="signin-link" aria-label="Already have an account?">
+        <p>Already have an account? <a aria-label="Sign in"href="login.html">Sign in</a></p>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+<script>
+    
+    function togglePasswordVisibility(inputId, toggleId) {
+        var passwordField = document.getElementById(inputId);
+        var toggleIcon = document.getElementById(toggleId);
+
+        if (passwordField.type === 'password') {
+            passwordField.type = 'text';
+            toggleIcon.classList.remove('fa-eye');
+            toggleIcon.classList.add('fa-eye-slash');
+            toggleId.setAttribute('aria-label','visibility: off');
+        } else {
+            passwordField.type = 'password';
+            toggleIcon.classList.remove('fa-eye-slash');
+            toggleIcon.classList.add('fa-eye');
+            toggleId.setAttribute('aria-label','visibility: on');
+        }
+    }
+
+    document.getElementById('togglePassword').addEventListener('click', function () {
+        togglePasswordVisibility('password', 'togglePassword');
+    });
+
+    document.getElementById('toggleConfirmPassword').addEventListener('click', function () {
+        togglePasswordVisibility('confirmPassword', 'toggleConfirmPassword');
+    });
+      //check valid formats
+// Password strength validation
+function isPasswordStrong(password) {
+    // Check for at least 8 characters, including one uppercase letter, one lowercase letter, and one number
+    return password.length >= 8 &&
+           /[a-z]/.test(password) &&
+           /[A-Z]/.test(password) &&
+           /[0-9]/.test(password);
+}
+
+// Email validation
+function isValidEmail(email) {
+    // Basic email format check
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+// Username validation
+function isValidUsername(username) {
+    // Check if the username contains only alphabets and numbers
+    return /^[a-zA-Z0-9]+$/.test(username);
+}
+
+// Form submission
+document.getElementById('signupForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    
+    var password = document.getElementById('password').value;
+    var confirmPassword = document.getElementById('confirmPassword').value;
+    var email = document.getElementById('email').value;
+    var username = document.getElementById('userid').value;
+
+    var errorMessage = '';
+
+    if (password !== confirmPassword) {
+        errorMessage += 'Passwords do not match! ';
+    }
+
+    if (!isPasswordStrong(password)) {
+        errorMessage += 'Password should contain at least 8 characters, including one uppercase letter, one lowercase letter, and one number. ';
+    }
+
+    if (!isValidEmail(email)) {
+        errorMessage += 'Invalid email format. ';
+    }
+
+    if (!isValidUsername(username)) {
+        errorMessage += 'Username should contain only alphabets and numbers. ';
+    }
+
+    if (errorMessage) {
+        document.getElementById('error-message').textContent = errorMessage;
+        return; // Stop further processing
+    }
+
+    var salt = generateSalt(16);
+    var saltedPassword = salt + password;
+    var hashedPassword = sha256(saltedPassword);
+
+    var formData = {
+        userid: username,
+        password: hashedPassword,
+        salt: salt,
+        email: email
+    };
+
+    fetch(`http://localhost:3000/users?userid=${formData.userid}&email=${formData.email}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.length === 0) {
+                registerUser(formData);
+            } else {
+                if (data.some(user => user.userid === formData.userid)) {
+                    errorMessage += 'User name already exists!<br>';
+                }
+                else if (data.some(user => user.email === formData.email)) {
+                    errorMessage += 'email already exists!';
+                }
+                document.getElementById('error-message').textContent = errorMessage;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('error-message').textContent = 'Network error! Please try again.';
+        });
+});
+
+// Generate random salt
+function generateSalt(length) {
+    var charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    var salt = '';
+    for (var i = 0; i < length; i++) {
+        var randomIndex = Math.floor(Math.random() * charset.length);
+        salt += charset[randomIndex];
+    }
+    return salt;
+}
+
+// Register user
+function registerUser(formData) {
+    fetch('http://localhost:3000/users', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data && data.id) {
+            alert('Sign up successful!');
+            window.location.href = 'login.html'; // Redirect to login page
+        } else {
+            document.getElementById('error-message').textContent = data.error || 'Something went wrong!';
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('error-message').textContent = 'Network error! Please try again.';
+    });
+}
+
+</script>
+
+</body>
+</html>

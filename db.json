@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "7a6f",
+      "userid": "Wrick pal",
+      "password": "96fd6a108da2026e9af88a02ba1d802e335b25b0982ebcffdd381b03bcaacfc5",
+      "salt": "5APvYNJmvXd4E5o8",
+      "email": "wrick9122rkm@gmail.com"
+    },
+    {
+      "id": "9b56",
+      "userid": "Wrick123",
+      "password": "635b1e9f1e6292d5640b83e96a1160e756d6f4339ff946498a1cfc73bd9623b2",
+      "salt": "eUe1c2D3bny8fiFt",
+      "email": "wrick9122rkm@gmail.com"
+    },
+    {
+      "id": "51cf",
+      "userid": "WrickPal",
+      "password": "317f49bb0be301964bc5cc19c465816384c8dd8d0aabbfcde05bd055ea615edb",
+      "salt": "3t1RLzPCDEoKfGnC",
+      "email": "wrick9122rkm@gmail.com"
+    }
+  ]
+}
