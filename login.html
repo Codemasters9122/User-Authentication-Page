@@ -237,7 +237,7 @@ input[type="password"] {
 <body>
 <div class="container">
     <h2>Log In</h2>
-    <form id="signupForm" method="post">
+    <form id="loginForm" method="post">
         <div class="input-icon"><i class="fas fa-user"></i></div>
         <input aria-label="Username" type="text" id="userid" placeholder="Username" name="userid" required>
         
@@ -255,11 +255,11 @@ input[type="password"] {
         <p>Don't have an account? <a href="sign up.html">Sign up</a></p>
     </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script> <!--importing js-SHA script for encryption-->
 <script>
 
-    function togglePasswordVisibility(inputId, toggleId) {
-        var passwordField = document.getElementById(inputId);
+function togglePasswordVisibility(inputId, toggleId) {//togglePassword in eye-icon
+        var passwordField = document.getElementById(inputId); 
         var toggleIcon = document.getElementById(toggleId);
 
         if (passwordField.type === 'password') {
@@ -276,19 +276,14 @@ input[type="password"] {
     document.getElementById('togglePassword').addEventListener('click', function () {
         togglePasswordVisibility('password', 'togglePassword');
     });
-    document.getElementById('signupForm').addEventListener('submit', function (event) {
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
         event.preventDefault();
 
         var username = document.getElementById('userid').value;
         var password = document.getElementById('password').value;
 
-        fetch(`http://localhost:3000/users/?userid=${username}`,{
-         method:'GET',
-         headers:{
-            'Content-Type':'application/json'
-         }
 
-        })
+        fetch('http://localhost:3000/users')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -296,24 +291,37 @@ input[type="password"] {
                 return response.json();
             })
             .then(data => {
-                console.log('Server response:', data);
-                if (!data || !Array.isArray(data.users)) {
-                    console.error('Invalid server response format:', data);
-                    throw new Error('Invalid server response format!');
+                console.log('Server response:', data); // checking if server response is correctly fetched after series of asynchronous operations. 
+             let usersArray;
+             if (Array.isArray(data)) {
+        // If the data is already an array, use it directly
+             usersArray = data;
+          } else if (data && Array.isArray(data.users)) {
+        // If the data contains a 'users' property that is an array, use that
+        usersArray = data.users;
+        } else {
+        console.error('Invalid server response format:', data);
+        throw new Error('Invalid server response format!');
     }
 
-                var user = data.users.find(u => JSON.parse(userid) === username);
+    // Now 'usersArray' contains the array of users
+    // Further processing of the data can be done here
+
+                var user = usersArray.find(u => u.userid === username);
 
                 if (user) {
-                    var hashedPassword = sha256(user.salt + password);
-
+                    // Verify the hashed password
+                    var salt = user.salt;
+                    var hashedPassword = sha256(salt+password);
                     if (hashedPassword === user.password) {
-                        alert('Login successful!');
+                        alert('Congratulations!Login successful!');
                         // Redirect or show success message
                     } else {
-                        throw new Error('Invalid password!');
+                        // Inform the user that the password is incorrect
+                        throw new Error('Incorrect password!');
                     }
                 } else {
+                    // Inform the user that the username is incorrect
                     throw new Error('User not found!');
                 }
             })
