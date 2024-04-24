@@ -45,6 +45,7 @@ Though having minor errors,upon successful login, you will receive an alert mess
 If you'd like to contribute to this project, please fork the repository and create a pull request with your changes.
 
 Some of the deployment screenshots are provided below:
+
 ![sign_up-1](https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/28da8a3c-2141-4a32-9271-76edb906d18f)
 
 ![log in form](https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/4ce8ee24-5b2e-443b-a75c-df2f854765b7)
@@ -60,3 +61,13 @@ Some of the deployment screenshots are provided below:
 ![responsiveness in sign-up form](https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/d75b78f7-490f-4369-9e4f-bc5373bd4381)
 
 ![Use of required attribute in sign up](https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/04c19499-6979-4706-abbb-c3eb70b1309a)
+
+![Backend database db json file running](https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/ed17a15f-91ba-4ba8-8b1c-ed7b9ac306be)
+
+![expected errors is shown ](https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/f0e22e1f-5189-4ad5-b1cf-afb6853f2c86)
+
+![expected successful sign up](https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/20f5df3d-ef40-45a6-af9c-a3369a9160c3)
+
+![invalid email format in sign up](https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/2a594c22-d0e5-43c8-83e5-7868ab799fde)
+
+![Passoword strength is being checked](https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/5220591c-c73a-437a-ab48-88e6cb2d19f9)
