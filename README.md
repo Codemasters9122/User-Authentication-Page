@@ -1,4 +1,4 @@
-**IEEE JUSB Recruitment Drive '24**
+**IEEE JUSB Technical Team Recruitment Drive '24**
 
 **Overview**
 
