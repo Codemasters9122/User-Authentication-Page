@@ -318,6 +318,7 @@ function isValidUsername(username) {
 
 // Form submission
 document.getElementById('signupForm').addEventListener('submit', function (event) {
+    errorMessage='';
     event.preventDefault();
     
     var password = document.getElementById('password').value;
@@ -359,26 +360,35 @@ document.getElementById('signupForm').addEventListener('submit', function (event
         email: email
     };
 
-    fetch(`http://localhost:3000/users?userid=${formData.userid}&email=${formData.email}`)
-        .then(response => response.json())
-        .then(data => {
-            if (data.length === 0) {
-                registerUser(formData);
-            } else {
-                if (data.some(user => user.userid === formData.userid)) {
-                    errorMessage += 'User name already exists!<br>';
-                }
-                else if (data.some(user => user.email === formData.email)) {
-                    errorMessage += 'email already exists!';
-                }
-                document.getElementById('error-message').textContent = errorMessage;
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            document.getElementById('error-message').textContent = 'Network error! Please try again.';
-        });
-});
+    const url = 'http://localhost:3000/users';
+
+// Check if any user with the same username or email already exists
+fetch(url)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    const existingUser = data.find(user => user.userid === formData.userid);
+    const existingEmail = data.find(user => user.email === formData.email);
+
+    if (existingUser && existingEmail) {
+      throw new Error('Username and email already exist!');
+    } else if (existingUser) {
+      throw new Error('Username already exists!');
+    } else if (existingEmail) {
+      throw new Error('Email already exists!');
+    }
+    // If no existing user or email found, proceed with registration
+    registerUser(formData);
+  })
+  .catch(error => {
+    console.error('Error:', error.message);
+    document.getElementById('error-message').textContent = error.message || 'An error occurred. Please try again.';
+  });
+
 
 // Generate random salt
 function generateSalt(length) {
@@ -389,7 +399,9 @@ function generateSalt(length) {
         salt += charset[randomIndex];
     }
     return salt;
+
 }
+
 
 // Register user
 function registerUser(formData) {
@@ -403,7 +415,8 @@ function registerUser(formData) {
     .then(response => response.json())
     .then(data => {
         if (data && data.id) {
-            alert('Sign up successful!');
+            errorMessage='';
+            alert('Congratulations! Sign up successful!');
             window.location.href = 'login.html'; // Redirect to login page
         } else {
             document.getElementById('error-message').textContent = data.error || 'Something went wrong!';
@@ -414,8 +427,8 @@ function registerUser(formData) {
         document.getElementById('error-message').textContent = 'Network error! Please try again.';
     });
 }
+})
 
 </script>
-
 </body>
 </html>
