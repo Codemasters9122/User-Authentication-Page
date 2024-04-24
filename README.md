@@ -7,9 +7,13 @@ This repository contains the source code for the sign-up and sign-in pages for t
 **Features**
 
 User registration with password hashing
+
 User authentication with password verification
+
 Toggle password visibility
+
 Input validation for username, password, and email
+
 **Technologies Used**
 
 *HTML*
