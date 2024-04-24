@@ -76,7 +76,7 @@ expected successful sign up (https://github.com/Codemasters9122/User-Authenticat
 
 invalid email format in sign up (https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/2a594c22-d0e5-43c8-83e5-7868ab799fde)
 
-Passoword strength is being checked (https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/5220591c-c73a-437a-ab48-88e6cb2d19f9)
+Password strength is being checked (https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/5220591c-c73a-437a-ab48-88e6cb2d19f9)
 
 successful login verification (https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/e8778d04-c857-4ede-8842-5b8c4277f535)
 
