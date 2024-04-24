@@ -44,7 +44,8 @@ Sign-in Page (login.html)
 Open login.html in a web browser.
 Enter your username and password.
 Click the "Log In" button to submit the form.
-Though having minor errors,upon successful login, you will receive an alert message.
+
+Upon successful login, you will receive an alert message otherwise suitable error messages.
 
 **Contributing**
 
