@@ -14,6 +14,8 @@ Toggle password visibility
 
 Input validation for username, password, and email
 
+Enhanced accessibility for blind users
+
 **Technologies Used**
 
 *HTML*
