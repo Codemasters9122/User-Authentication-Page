@@ -80,3 +80,6 @@ sign_up(https://github.com/Codemasters9122/User-Authentication-Page/assets/14510
 ![successful login verification](https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/e8778d04-c857-4ede-8842-5b8c4277f535)
 
 ![user not found in log-in ](https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/16d3e855-09d3-4b14-8b6a-767e2f75caa7)
+
+![incorrect password in login](https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/0a58a562-61db-41f7-baae-b46a2e6fd8ce)
+
