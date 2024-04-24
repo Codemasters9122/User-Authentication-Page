@@ -76,3 +76,7 @@ sign_up(https://github.com/Codemasters9122/User-Authentication-Page/assets/14510
 ![invalid email format in sign up](https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/2a594c22-d0e5-43c8-83e5-7868ab799fde)
 
 ![Passoword strength is being checked](https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/5220591c-c73a-437a-ab48-88e6cb2d19f9)
+
+![successful login verification](https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/e8778d04-c857-4ede-8842-5b8c4277f535)
+
+![user not found in log-in ](https://github.com/Codemasters9122/User-Authentication-Page/assets/145101193/16d3e855-09d3-4b14-8b6a-767e2f75caa7)
